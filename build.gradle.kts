@@ -45,12 +45,6 @@ dependencies {
 	implementation("commons-io:commons-io:2.11.0")
 	implementation("io.jsonwebtoken:jjwt:0.9.1")
 }
-tasks.withType<KotlinCompile> {
-	kotlinOptions {
-		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "11"
-	}
-}
 
 tasks.withType<Test> {
 	useJUnitPlatform()
