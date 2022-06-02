@@ -9,7 +9,7 @@ import javax.validation.Valid
 
 @RestController
 @RequestMapping("/Recruiter")
-@CrossOrigin("http://localhost:3000/")
+@CrossOrigin("https://frontend-jobhunt.herokuapp.com/")
 class RecruiterController(private var recruiterService: RecruiterService) {
 
     @PostMapping("/addRecruiter")

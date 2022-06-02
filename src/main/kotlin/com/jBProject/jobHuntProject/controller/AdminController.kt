@@ -10,7 +10,7 @@ import javax.validation.Valid
 
 @RestController
 @RequestMapping("/admin")
-@CrossOrigin("http://localhost:3000/")
+@CrossOrigin("https://frontend-jobhunt.herokuapp.com/")
 class AdminController(var adminService: AdminService) {
 
     @PostMapping("/addAdmin")

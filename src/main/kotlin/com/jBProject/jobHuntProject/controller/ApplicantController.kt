@@ -14,7 +14,7 @@ import javax.validation.Valid
 
 @RestController
 @RequestMapping("/Applicant")
-@CrossOrigin("http://localhost:3000/")
+@CrossOrigin("https://frontend-jobhunt.herokuapp.com/")
 class ApplicantController(private var applicantService: ApplicantService) {
 
 

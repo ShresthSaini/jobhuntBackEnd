@@ -12,7 +12,7 @@ import javax.servlet.http.Cookie
 import javax.servlet.http.HttpServletResponse
 
 @RestController
-@CrossOrigin(origins = ["http://localhost:3000/"], allowCredentials = "true")
+@CrossOrigin(origins = ["https://frontend-jobhunt.herokuapp.com/"], allowCredentials = "true")
 class LoginController(
     private var loginService: LoginService,
     var util: JwtUtils,
