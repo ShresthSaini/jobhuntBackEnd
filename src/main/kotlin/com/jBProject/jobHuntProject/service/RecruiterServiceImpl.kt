@@ -225,7 +225,7 @@ class RecruiterServiceImpl(
     }
 
     override fun deleteJobById(recruiterEmail: String, jobId: String): String {
-        if (jobDAO.existsById(jobId)) {
+        if (this.jobDAO.existsById(jobId)) {
             val recruiterTemp = this.recruiterDAO.findById(recruiterEmail).get()
             val jobTemp = this.jobDAO.findById(jobId).get()
 
@@ -237,9 +237,6 @@ class RecruiterServiceImpl(
             recruiterDAO.save(recruiterTemp)
             this.jobDAO.deleteById(jobId)
 
-            if (jobStatusDAO.existsByJobTitle(jobTemp.jobTitle)) {
-                this.jobStatusDAO.deleteById(jobTemp.jobTitle)
-            }
             return "Job successfully deleted"
         } else {
             throw DeleteException("Couldn't find the job")
